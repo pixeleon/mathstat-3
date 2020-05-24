@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vadique.khpi.year2.stats.third.FisherController">
+   <top>
+      <HBox alignment="CENTER" prefWidth="450.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonAddX" mnemonicParsing="false" onAction="#doAddX" text="ADD X" />
+            <Button fx:id="buttonRemoveX" mnemonicParsing="false" onAction="#doRemoveX" text="REMOVE X" />
+            <Button fx:id="buttonAddY" mnemonicParsing="false" onAction="#doAddY" text="ADD Y" />
+            <Button fx:id="buttonRemoveY" mnemonicParsing="false" onAction="#doRemoveY" text="REMOVE Y" />
+            <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#doClear" prefWidth="75.0" text="CLEAR" />
+            <Button fx:id="buttonAnalyze" mnemonicParsing="false" onAction="#doAnalyze" prefHeight="25.0" text="ANALYZE " />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <center>
+      <FlowPane hgap="5.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="200.0" vgap="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="X Mean:" />
+            <TextField fx:id="textFieldXMean" prefHeight="25.0" />
+            <Label text="Y Mean:" />
+            <TextField fx:id="textFieldYMean" prefHeight="25.0" />
+            <Label text="X Variance:" />
+            <TextField fx:id="textFieldXVariance" prefHeight="25.0" />
+            <Label text="Y Variance:" />
+            <TextField fx:id="textFieldYVariance" prefHeight="25.0" />
+            <Label text="Testing hypotheses about variances equality:" />
+            <Label text="F crit:" />
+            <TextField fx:id="textFieldFCrit" />
+            <Label text="F real: " />
+            <TextField fx:id="textFieldFReal" />
+            <Label fx:id="labelTestConclusion" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </FlowPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelXN" text="nx:" />
+            <Label text="a (confidence level):" />
+            <TextField fx:id="textFieldConfidLevel" />
+            <Label fx:id="labelYN" text="ny:" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <left>
+      <ListView fx:id="listViewX" editable="true" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <ListView fx:id="listViewY" editable="true" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
