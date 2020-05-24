@@ -1,2 +1,2 @@
 # mathstat-3
- Maths Statistics. Lab 1. Fisher Test
+ Maths Statistics. Lab 2. Fisher Test
